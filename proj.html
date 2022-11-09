@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+      background-color: rgb(74, 99, 137); 
+      
+      border: 20px;
+    }
+    * {
+  box-sizing: border-box;
+} 
+@media only screen and (max-width: 500px) 
+{
+  .Right{
+    margin-right: 3%;
+    width: 25%;
+    background-color:  rgba(91, 94, 126, 0.918);
+    text-decoration: none;
+  }
+  .head{
+    width: 25%;
+    text-decoration: none;
+    padding-bottom: 2px;
+    
+  }
+  .d2
+  {
+        font-size:10px !important;
+        background-color: rgba(203, 193, 193, 0.918) !important;
+        width: 70% !important;
+        
+  }
+  .A1{
+    float: right;
+  }
+  .A2{
+    float: right;
+  }
+  
+   
+}
+
+    
+        ::placeholder {
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        color: black;
+        
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+      #I3{
+        background-color: aliceblue;
+        font-style: italic ;
+        font-size:18px;
+        
+      }
+     
+      .button {
+        background-color: #fafcf5;
+  border:black;
+  box-shadow: 0 9px 18px 0 #333333, 0 8px 24px 0 #333333;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(206, 90, 90);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor:pointer;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.brand{
+    width: 250px;
+    height: 90px;
+    padding: 17px;
+    border: 15px solid yellowgreen;
+}
+.Right
+    {
+      margin-left: 80px;
+    }
+    #nav_bar a:hover 
+    {
+     
+      border-radius: 20px;
+      background-color: rgb(242, 98, 9);
+      color: rgb(9, 8, 14);
+    }
+    #nav_bar
+    {
+      overflow: hidden;
+      background-color: rgba(101, 39, 151, 0.918);
+      width: auto;
+      
+    }
+
+    #nav_bar a 
+    {
+      float: left;
+      display: block;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      padding: 14px;
+      font-size: 20px;
+    }
+    #d1{
+  background-color: lightgrey;
+  
+  border: 15px solid green;
+  padding: 20px;
+  margin: 20px;
+  
+  
+}
+#d3{
+  background-color: antiquewhite;
+  border: solid red;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  width: 50%;
+  text-align: center;
+}
+#d5{
+  background-color: antiquewhite;
+  border: solid red;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  width: 50%;
+  text-align: center;
+  display: none;
+  text-align: center;
+
+
+}
+
+</style>
+<body >
+  <div>
+    <div id="nav_bar">
+        <a href  =  " https://www.geeksforgeeks.org/matrix/" class="head" >About matrix</a>
+        <div class="Right">
+        <a href="https://github.com/Prasoon0320" class="Right" id="A1">GIT HUB Link</a>
+        <a href="https://www.linkedin.com/in/prasoon-singh-76919022a/" class="Right" id="A2">LINKED IN Link</a>
+      </div>
+      </div>
+    
+   
+    <center>
+      
+      
+    <div id ="d1" style="margin-top: 100px;text-align: center; font-size: 30px;border-radius: 20px;">
+    Print common elements in rows of given matrix:-
+    </div>
+    <div id="d3" style="margin-top: 50px; text-align: center; font-size: 30px;">
+      Enter the rows and columns of matrix
+    </div>
+    <div class="d3">
+   
+    <input type="text" style="border-radius: 20px; box-shadow: 0 9px 18px 0 #333333, 0 8px 24px 0 #333333;margin-top: 70px; margin-left: 0px;align-self: center;padding: 20px; text-align: center;background-color: aquamarine; size: 20px;font-size: 30px;" name="row"  placeholder="Rows" id="row">
+
+ </input>
+    <input type="text1" style="border-radius: 20px; box-shadow: 0 9px 18px 0 #333333, 0 8px 24px 0 #333333;margin-top: 100px; margin-left: 20px;padding: 20px ; text-align: center; background-color: aquamarine ;font-size: 30px;" name="col" placeholder="cols" id="col">
+
+
+</input>
+</div>
+
+<br>
+<button style="margin-left:0px;" onclick="reset()" class="button"  id="b1" >
+Submit
+</button>
+<div id="d5" style="font-size: 30px;">
+
+</div>
+
+      
+
+</br>
+
+    </center>
+    
+<script>
+      row.addEventListener("keyup", func)
+    row.addEventListener("blur", func)
+    //seta.addEventListener("mouseout",func)
+    col.addEventListener("keyup", func)
+    col.addEventListener("blur", func);
+    //setb.addEventListener("mouseout",func)
+    
+    function func() {
+      if (event.target.value == '') {
+        event.target.style.background = "#ffcccb";
+      }
+      else {
+        event.target.style.background = "#b5651d";
+      }
+    }
+   
+    function reset()
+    {
+      document.getElementById("d5").style.display="block";
+        var rows = document.getElementById("row").value;
+        var cols = document.getElementById("col").value;
+        var count=0;
+
+        var mat = new Array(rows);
+        var ar = new Array(cols);
+        for(var i =0; i< rows; i++){
+            mat[i]= new Array(cols);
+        }
+        
+        for(var i =0 ; i < rows ; i++){
+            for(var j=0 ; j < cols ; j++){
+                mat[i][j]= prompt("value of cell" +" "+ i +j+" "+"of matrix");
+            }
+        }
+     
+                let map = new Map();
+              
+           
+            for (let j = 0; j < cols; j++)
+            {
+                map.set(mat[0][j],1);
+            }
+                  
+            
+            for (let i = 1; i < rows; i++)
+            {
+                for (let j = 0; j < cols; j++)
+                {
+                    
+                    if (map.get(mat[i][j]) != null && map.get(mat[i][j]) == i)
+                    {
+                       
+                        map.set(mat[i][j], i + 1);
+          
+                        if (i == rows - 1)
+                            {
+                            ar[count]=(mat[i][j] + " ");
+                            count++;
+                            }
+                            else{
+                          
+                        }
+                            
+                    }
+                
+                }
+            }
+            
+            for(let i=0 ; i<1;i++){
+              if(ar[i]>0){
+                document.getElementById("d5").innerHTML=("These are the common elements of the rows:-" + ar);
+              }
+              else{
+                document.getElementById("d5").innerHTML=("No common elements");
+              }
+            }
+            }
+        printCommonElements(mat);
+        
+</script>
+
+   
+</body>
+</html>
